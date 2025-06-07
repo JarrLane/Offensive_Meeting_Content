@@ -51,10 +51,10 @@ If this is alot to understand thats ok, Docker can be confusing. Before reading 
 ## Using Docker 
 
 For this section I will split into multiple parts:
-> Downloading docker
-> Creating a Docker File
-> Creating an image based on the Docker File
-> Run a container based off of the image
+- Downloading docker
+- Creating a Docker File
+- Creating an image based on the Docker File
+- Run a container based off of the image
 
 ### Downloading Docker
 

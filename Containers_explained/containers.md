@@ -17,7 +17,7 @@ We typically use virtualization of systems for: cloud/server purposes, testing o
 
 Containerization is a type of virtualization, when we say containerization we are talking about applications. Similar to how we may want to run different systems independently on one piece of hardware, we also want to run different applications independently on one operating system. To tie this back to our earlier example, we split up the field between soccer and football, but what if multiple football teams want to have their practice at the same location at the same time? Since we have such a big field, we can divide the designated football field so both teams can practice independently of each other. This means the two football teams will both have their own practice independently. Each team will practice the with equipment they need, while using the painted lines and benches on the football field that lies on one big grass feild. This is the same with containers, we package an application with all of the software requirements it needs, and when we run it, it uses its own files to independently run on the operating system, isolating itself from other processes. 
 
-We typically use containers for: cloud/server purposes, development, efficiently sharing software, quickly deploying apps, etc.
+We typically use containers for: cloud/server purposes, development, efficiently sharing software (using containerization its easy for multiple environments to run your code without issue as long as they have the container set up properly), quickly deploying apps, etc.
 
 ![image](https://github.com/user-attachments/assets/3d969a52-9801-4c0c-b76c-0bbd2737baa5)
 

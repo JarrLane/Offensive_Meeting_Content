@@ -21,7 +21,7 @@ We typically use containers for: cloud/server purposes, development, efficiently
 
 ![image](https://github.com/user-attachments/assets/3d969a52-9801-4c0c-b76c-0bbd2737baa5)
 
-### Docker
+# Docker
 
 
 Now that I have explained the concepts, it is time to talk about docker.
@@ -56,7 +56,7 @@ Back to the computer part, docker is great for many organizations because they n
 
 If this is alot to understand thats ok, Docker can be confusing. Before reading on I reccomend having a solid grasp of everything I talked about up to this point, because now we are actually going to use docker and run two challenges I made. If you have any questions dm me or ping me in the discord if you are in the club. 
 
-## Using Docker 
+# Using Docker 
 
 For this section I will split into multiple parts:
 - Downloading docker

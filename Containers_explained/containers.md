@@ -66,8 +66,30 @@ For this section I will split into multiple parts:
 
 ### Downloading Docker
 
+To start we have community or enterprise edition. Assuming you arent a big company reading this, you should download community because it is free. 
 
+If you go to the docker website you will see a button that says "Download Docker Desktop", from there choose the operating system you use and you will get Docker with a GUI. If you are sick in the head and you don't like using GUIs, you can use your terminal too, just use the "Docker" command once installed. A good way to check if docker installed correctly is to go to your terminal and type Docker --version and if it tells you the version you're good.
 
+### Creating Docker File
+
+For this walkthrough, I am going to use a basic flask server as an example, here is the code: 
+
+'''
+import flask
+from flask import jsonify
+
+app = flask.Flask(__name__)
+
+@app.route("/")
+def index():
+    return jsonify(message = "Working docker example")
+
+if __name__ == "__main__":
+    app.run()
+'''
+All this does is returns a json message telling me this is a working docker example, very simple.
+
+Since I am using pycharm, I will
 
 
 

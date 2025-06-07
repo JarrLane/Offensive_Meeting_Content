@@ -34,11 +34,19 @@ Lets say we have our football feild with multiple teams that are practicing, dif
 
 Same with docker containers, with the use of docker file, image, and container, we can give a program everything it needs to run on any computer*.
 
+## Docker File
+
 The docker file is a list/guide/recipie/set of instructions that is used to configure a docker image. Think of it as the football team making a list of all the equipment they need as well as how the field should be set up.
+
+## Docker image
 
 The docker image is the package of all binaries, configurations, libraries, and files necessary for a container. Think of it as the actual field with all of the equipment provided and the field properly set up for practice. 
 
+## Docker container
+
 The docker container is a process that is an instance of an image that runs as an isolated process. When I say instance, I mean that it is an occurence of a program that is based off of the image. So based off the field that has been set up and equiped, the football team is like that process that uses the equipment and field. Some football teams may share the same equipment and set up requirements, so we can say those two teams are different instances/ processes that are based on the same base field setup and equipment.
+
+## Docker program
 
 To put this all together, we use docker to combine and manage each of these three things. Docker will read the docker file, use it to create the necessary image, and use this image to run containers/processes. We can say docker is the manager of the entire football field, the manager will get a list of what the football team needs, have everything set up and provided, and let the football team do their thing independently. 
 

@@ -40,7 +40,7 @@ The docker file is a list/guide/recipie/set of instructions that is used to conf
 
 ## Docker image
 
-The docker image is the package of all binaries, configurations, libraries, and files necessary for a container. Think of it as the actual field with all of the equipment provided and the field properly set up for practice. 
+The docker image is the package of all binaries, configurations, libraries, and files necessary for a container. Its the base template that your program will run off of. Think of it as the actual field with all of the equipment provided and the field properly set up for practice. 
 
 ## Docker container
 
@@ -52,7 +52,13 @@ To put this all together, we use docker to combine and manage each of these thre
 
 Back to the computer part, docker is great for many organizations because they now have an easy and standard way to share, deploy, build, package, and run any application or service needed, this goes far beyond organizations, maybe we want to share an app we made with a friend, maybe we want to try a new appp, or maybe we want to run a ctf challenge on our computers locally. 
 
-*One important note before we continue, while docker allows for flexibility in running an app in multiple environments, it is also OS specific. If an image was configured to run with windows then it wont run on linux unless we either: create a windows VM and run the image in that vm, or make a new image that works with linux. Think about the analogy, say we have a group of kids that want to play a sport, they bring a football but they end up at a soccer field, they can either treat part of that soccer field as a football field (virtualization), go to a football field (use a different computer with the proper OS), or just play soccer instead (Use a new image with the correct operating system).
+*One important note before we continue, while docker allows for flexibility in running an app in multiple environments, it is also OS specific. If an image was configured to run with operating system 1 (OS1) then it wont run on operating system 2 (OS2) unless we either: create a (OS1) VM and run the image in that vm, or make a new image that works with OS2. Think about the analogy, say we have a group of kids that want to play a sport, they bring a football but they end up at a soccer field, they can either treat part of that soccer field as a football field (virtualization), go to a football field (use a different computer with the proper OS), or just get a soccer ball and play soccer instead (Use a new image with the correct operating system). Operating systems use different architectures, and while some powerful tools like virtualization have been made to bridge this gap better, there are still a few limitations.
+
+Since we are using docker desktop on windows, we dont really have to worry about this too much. The docker engine technically runs on linux, but it also runs on windows because under the hood there is a little bit of virtualization that runs linux, which docker will use. This little bit of virtualization is much different from tradtional virtualization and it is very lightweight compared to actually making a VM, and this should all happen automatically (Note). This means if you are using windows, you should be fine. If you have a windows VM no worries either because you already have the architecture you need.
+
+If you are linux you basically have everything docker needs so you are good, but if you are given a windows container you will have to create a windows VM because unlike how windows has easy lightweight virtualization options for linux, linux doesn't have that same support for windows programs appart from creating a separate VM.
+
+Note: If you are a windows user you are probably wondering, if docker is using a vm with windows, then why not just make a linux vm and use docker there? You definitely can, but the type of virtualization being used when running docker on windows is very lightweight and more efficient, but you may prefer a linux VM, either way is fine its up to you. The great thing is that docker takes care of alot of stuff for us. 
 
 If this is alot to understand thats ok, Docker can be confusing. Before reading on I reccomend having a solid grasp of everything I talked about up to this point, because now we are actually going to use docker and run two challenges I made. If you have any questions dm me or ping me in the discord if you are in the club. 
 
@@ -89,7 +95,76 @@ if __name__ == "__main__":
 '''
 All this does is returns a json message telling me this is a working docker example, very simple.
 
-Since I am using pycharm, I will
+Now I will create my Docker file.
+
+To begin, its important to understand that Docker images consist of layers. These layers are stacked in a way that higher layers depend on the layers below. We say that the parent layer is the beginning layer that sets up a basic foundation of the image. 
+
+When working with docker files, it will consist of commands to set up our image. These are some basic commands that are important to know:
+
+- FROM: Specify the parent image/layer, you will build upon this
+- WORKDIR: specify where docker should run necessary commands when running the image, where do you want the container to run?
+- RUN: run commands necessary for the container, like installing the packages you need
+- COPY: copy files from directories
+- ADD: like COPY, but can also use URLs and Directories, and also handles compressed files
+- ENTRYPOINT: the first command that gets run when you start a container
+- CMD: give a command to run when starting a container, very similar to ENTRYPOINT but it can be over ridden, ENTRYPOINT cant
+- EXPOSE: which port your container will communicate on
+
+There are many more commands but for this lab I want you to focus on these. 
+
+To start, lets use out FROM command, in our case we are just using a very simple python flask server so I will set this to python:3.10 for the version of python that I am running.
+
+The next step is using the ADD command, I will put "ADD example.py .", this adds the code I showed earlier to current directory of the container. 
+
+Next I will use the RUN command: "RUN pip install flask", this will give us the flask library which lets us run a simple web server, notice how I use pip, thats because we are going based off of python
+
+Now I will use CMD to specify a command and its parameter which will run when the container starts, here is what that will look like: "CMD ["python", "./example.py"]", this means that when the container starts, it will run this command, this command tells python to run example.py which is located in the current directory.  
+
+This gives us our dockerfile: 
+
+```
+FROM python:3.10
+
+ADD example.py .
+
+RUN pip install flask
+
+CMD ["python", "./example.py"]
+```
+Lets turn this into an image.
+
+### Creating the image
+
+To create the image we will use the command: 
+```docker build -t example-image .```
+
+This builds a new image and the -t names it example-image. When I run this command here is what happens (Make sure you are doing this in the same directory as the docker file and code you are adding to the image.)
+
+![image](https://github.com/user-attachments/assets/504738a5-7255-414d-99b2-0d768daba27e)
+
+Lets open the docker app and find the image: 
+
+![image](https://github.com/user-attachments/assets/69904030-846b-4079-b379-f9168c25203b)
+
+We found our image, its pretty big but I probably couldve optimized it more, you can always delete images when you are done if they are taking up too much space.
+
+### Run a container from our image
+
+Now we can run our containers, I am going to use the command line
+
+I will run:
+
+```docker run -d -p 127.0.0.1:8082:5000 example-image```
+
+This runs a container with less logs and also does something called publishing a port. When you run a container, it is so isolated that the port it is running on isn't accessible to me by default. To connect to our container from the host, we can forward traffic between our two environments by giving a port for our container to interact on, and a port for us to interact with, this forwards traffic from our port 8082 to the containers port 5000. 
+
+If you dont know what ports are in networking here is a very simplified explanation, different computers need to send different types of data to each other, how do we organize all of this data? Ports. We can give a number to different types of services and when communicating with a specific service, we communicate over that specific port, so if we visit a website we use 80 or 443, if we want to use a shell on another system we use port 23, if we want to use this shell with encryption we use port 22. In our case, we are using port 8082 to talk to our flask server. 
+
+Another thing for those unfamiliar with networking, we are running this server on ip 127.0.0.1, what does this mean? This address was made to specifically refer back to our own machine, this can be useful for a variety of reasons, in our case, we are running this server on our own computer, this means that when we communicate with it, we arent using any internet, we are just talking to ourselves on different ports.
+
+With that explained lets run the command, here is what we get:
+
+
 
 
 

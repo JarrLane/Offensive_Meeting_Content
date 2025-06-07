@@ -44,11 +44,19 @@ To put this all together, we use docker to combine and manage each of these thre
 
 Back to the computer part, docker is great for many organizations because they now have an easy and standard way to share, deploy, build, package, and run any application or service needed, this goes far beyond organizations, maybe we want to share an app we made with a friend, maybe we want to try a new appp, or maybe we want to run a ctf challenge on our computers locally. 
 
-One important note before we continue, while docker allows for flexibility in running an app in multiple environments, it is also OS specific. If an image was configured to run with windows then it wont run on linux unless we either: create a windows VM and run the image in that vm, or make a new image that works with linux. Think about the analogy, say we have a group of kids that want to play a sport, they bring a football but they end up at a soccer field, they can either treat part of that soccer field as a football field (virtualization), go to a football field (use a different computer with the proper OS), or just play soccer instead (Use a new image with the correct operating system).
+*One important note before we continue, while docker allows for flexibility in running an app in multiple environments, it is also OS specific. If an image was configured to run with windows then it wont run on linux unless we either: create a windows VM and run the image in that vm, or make a new image that works with linux. Think about the analogy, say we have a group of kids that want to play a sport, they bring a football but they end up at a soccer field, they can either treat part of that soccer field as a football field (virtualization), go to a football field (use a different computer with the proper OS), or just play soccer instead (Use a new image with the correct operating system).
 
+If this is alot to understand thats ok, Docker can be confusing. Before reading on I reccomend having a solid grasp of everything I talked about up to this point, because now we are actually going to use docker and run two challenges I made. If you have any questions dm me or ping me in the discord if you are in the club. 
 
+## Using Docker 
 
+For this section I will split into multiple parts:
+> Downloading docker
+> Creating a Docker File
+> Creating an image based on the Docker File
+> Run a container based off of the image
 
+### Downloading Docker
 
 
 

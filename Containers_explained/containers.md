@@ -14,7 +14,7 @@ In the context of computers, virtualization is a way to simulate/run an isolated
 We typically use virtualization of systems for: cloud/server purposes, testing operating systems, saving money by not buying more hardware, using legacy systems, etc.
 
 
-![image](https://github.com/user-attachments/assets/5eca19d8-a2b6-4f02-8c90-79d4f0f33e1d)
+![image](https://github.com/user-attachments/assets/3431eb9d-70e3-499a-bffd-827b8bfff577)
 
 
 
@@ -27,7 +27,8 @@ Containerization is a type of virtualization, when we say containerization we ar
 We typically use containers for: cloud/server purposes, development, efficiently sharing software (using containerization its easy for multiple environments to run your code without issue as long as they have the container set up properly), quickly deploying apps, etc.
 
 
-![image](https://github.com/user-attachments/assets/3d969a52-9801-4c0c-b76c-0bbd2737baa5)
+![image](https://github.com/user-attachments/assets/9818f2fc-8ad6-4def-918e-025789a8f5b2)
+
 
 
 # Docker
@@ -78,7 +79,10 @@ Back to the computer part, docker is great for many organizations because they n
 ### Important stuff to know about your OS and Docker
 
 
-*One important note before we continue, while docker allows for flexibility in running an app in multiple environments, it is also OS specific. If an image was configured to run with operating system 1 (OS1) then it wont run on operating system 2 (OS2) unless we either: create a (OS1) VM and run the image in that vm, or make a new image that works with OS2. Think about the analogy, say we have a group of kids that want to play a sport, they bring a football but they end up at a soccer field, they can either treat part of that soccer field as a football field (virtualization), go to a football field (use a different computer with the proper OS), or just get a soccer ball and play soccer instead (Use a new image with the correct operating system). Operating systems use different architectures, and while some powerful tools like virtualization have been made to bridge this gap better, there are still a few limitations.
+*One important note before we continue, while docker allows for flexibility in running an app in multiple environments, it is also OS specific. If an image was configured to run with operating system 1 (OS1) then it wont run on operating system 2 (OS2) unless we either: create a (OS1) VM and run the image in that vm, or make a new image that works with OS2. Think about the analogy, say we have a group of kids that want to play a sport, they bring a football but they end up at a soccer field, they can either treat part of that soccer field as a football field (virtualization), go to a football field (use a different computer with the proper OS), or just get a soccer ball and play soccer instead (Use a new image with the correct operating system). 
+
+
+Operating systems use different architectures, and while some powerful tools like virtualization have been made to bridge this gap better, there are still a few limitations.
 
 
 Since we are using docker desktop on windows, we dont really have to worry about this too much. The docker engine technically runs on linux, but it also runs on windows because under the hood there is a little bit of virtualization that runs linux, which docker will use. This little bit of virtualization is much different from tradtional virtualization and it is very lightweight compared to actually making a VM, and this should all happen automatically (Note). This means if you are using windows, you should be fine. If you have a windows container no worries either because you already have the architecture you need.

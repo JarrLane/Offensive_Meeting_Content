@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website from container</title>
+  <style>
+    body {
+      background-color: #d0d0d0;
+      font-family: "Courier New", Courier, monospace;
+      color: #000;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 24px;
+      text-shadow: 1px 1px 0px #fff;
+      animation: flicker 2s infinite alternate;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: #f0f0f0;
+      border: 2px ridge #999;
+      display: inline-block;
+      padding: 20px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    input[type="text"] {
+      font-family: "Courier New", Courier, monospace;
+      width: 150px;
+      background-color: #fff;
+      border: 1px solid #666;
+      padding: 5px;
+      color: #000;
+    }
+
+    button {
+      margin-top: 10px;
+      font-family: "Courier New", Courier, monospace;
+      background-color: #ccc;
+      border: 2px outset #888;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #aaa;
+      border: 2px inset #888;
+    }
+
+    #responseBox {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.95; }
+      60% { opacity: 0.8; }
+      70% { opacity: 1; }
+      100% { opacity: 0.98; }
+    }
+  </style>
+  <script>
+
+    async function sendData(event) {
+      event.preventDefault();
+      const nameValue = document.getElementById("adminInput").value;
+
+      const response = await fetch("/submit-data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name: nameValue })
+      });
+
+      const result = await response.json();
+      document.getElementById("responseBox").innerText = result.message;
+    }
+  </script>
+</head>
+<body>
+  <h1>I am an independently running application and I was deployed from a docker container</h1>
+  <p>Can you find the first part of the flag?</p>
+
+  <form onsubmit="sendData(event)">
+    <label for="adminInput">Type 'admin' here for a surprise:</label>
+    <input type="text" id="adminInput" maxlength="4"/>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="responseBox" style="margin-top: 15px; font-weight: bold;"></p>
+</body>
+</html>

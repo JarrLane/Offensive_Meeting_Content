@@ -252,3 +252,5 @@ https://adamtheautomator.com/docker-compose-tutorial/
 https://stackoverflow.com/questions/34809646/what-is-the-purpose-of-volume-in-dockerfile
 
 https://www.geeksforgeeks.org/what-is-docker-hub/
+
+https://www.youtube.com/watch?v=DQdB7wFEygo

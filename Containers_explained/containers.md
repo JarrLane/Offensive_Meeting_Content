@@ -222,3 +222,33 @@ Usually in real CTFs the challenge code you download will include a fake flag li
 # Conclusion
 
 This was all a basic overview of Docker. When I first started out in cybersecurity I couldnt wrap my head around docker, same with many people starting out, so I hope this tutorial and lab i made helped. This was a cool little project and I look forward to doing more stuff. Thank you for reading my tutorial and completing my lab.
+
+
+
+# References
+
+https://nickjanetakis.com/blog/differences-between-a-dockerfile-docker-image-and-docker-container
+
+https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container
+
+https://jfrog.com/devops-tools/article/understanding-and-building-docker-images/
+
+https://www.geeksforgeeks.org/what-is-dockerfile-syntax/
+
+https://www.docker.com/blog/how-to-dockerize-your-python-applications/
+
+https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/
+
+https://medium.com/@leroyleowdev/the-missing-piece-why-docker-cant-run-windows-containers-on-linux-but-can-run-linux-containers-d0defc5588c1
+
+https://askubuntu.com/questions/1163283/does-wsl2-run-linux-in-a-virtual-machine-or-alongside-the-windows-kernel
+
+https://medium.com/@leroyleowdev/the-missing-piece-why-docker-cant-run-windows-containers-on-linux-but-can-run-linux-containers-d0defc5588c1
+
+https://arsanatl.medium.com/understanding-python-virtual-environments-an-in-depth-guide-6ffddab02498
+
+https://adamtheautomator.com/docker-compose-tutorial/
+
+https://stackoverflow.com/questions/34809646/what-is-the-purpose-of-volume-in-dockerfile
+
+https://www.geeksforgeeks.org/what-is-docker-hub/

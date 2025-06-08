@@ -270,7 +270,7 @@ What I did was a basic introduction to docker, there is so much more to it, and 
 - Docker compose
   
 
-Docker compose is an efficient way to deal with multiple containers and easily reproduce desired containers. It is basically a config file in YAML that is easier to read, type out, and use woth containers.
+Docker compose is an efficient way to deal with multiple containers and easily reproduce desired containers. It is basically a config file in YAML that is easier to read, type out, and use with containers. This is so much nicer than typing out a command with alot of parameters.
 
 
 - Volumes

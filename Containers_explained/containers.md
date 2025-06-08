@@ -75,6 +75,9 @@ To put this all together, we use docker to combine and manage each of these thre
 Back to the computer part, docker is great for many organizations because they now have an easy and standard way to share, deploy, build, package, and run any application or service needed, this goes far beyond organizations, maybe we want to share an app we made with a friend, maybe we want to try a new appp, or maybe we want to run a ctf challenge on our computers locally. 
 
 
+### Important stuff to know about your OS and Docker
+
+
 *One important note before we continue, while docker allows for flexibility in running an app in multiple environments, it is also OS specific. If an image was configured to run with operating system 1 (OS1) then it wont run on operating system 2 (OS2) unless we either: create a (OS1) VM and run the image in that vm, or make a new image that works with OS2. Think about the analogy, say we have a group of kids that want to play a sport, they bring a football but they end up at a soccer field, they can either treat part of that soccer field as a football field (virtualization), go to a football field (use a different computer with the proper OS), or just get a soccer ball and play soccer instead (Use a new image with the correct operating system). Operating systems use different architectures, and while some powerful tools like virtualization have been made to bridge this gap better, there are still a few limitations.
 
 

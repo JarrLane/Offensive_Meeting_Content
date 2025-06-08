@@ -147,7 +147,7 @@ Lets open the docker app and find the image:
 
 ![image](https://github.com/user-attachments/assets/69904030-846b-4079-b379-f9168c25203b)
 
-We found our image, its pretty big but I probably couldve optimized it more, you can always delete images when you are done if they are taking up too much space.
+We found our image, its pretty big but I probably couldve optimized it more, you can always delete images when you are done if they are taking up too much space. (Jarrett 4 hours later here, it turns out you can instead use FROM python:3.10-slim and that makes the size much less)
 
 ### Run a container from our image
 
@@ -217,6 +217,8 @@ Docker is also great for general offensive stuff too, they can be used in cybers
 
 Since we are talking about CTF, I made a lab for you all. I made two very simple challenges for you to host on your own computer using docker. I will provide the original challenge code and a dockerfile to configure the image, I will also give you the commands to run the container properly. When setting this all up, take the time to understand the process and how everything is working, I was almost going to make you all write the Dockerfile yourselves but that would've probably been too far. 
 
-Usually in real CTFs the challenge code you download will include a fake flag like: "flag{test}", and you get the real flag from hacking the server. In this case I am not actually hosting these challenges so the code I give you will have the real flag, even though technically you can just look at the code and see the flag without actually solving the challenge please dont. To prove to me you were able to get the flag the intended way show me a screenshot of you getting the flag running from a container.
+Usually in real CTFs the challenge code you download will include a fake flag like: "flag{test}", and you get the real flag from hacking the server. In this case I am not actually hosting these challenges so the code I give you will have the real flag, even though technically you can just look at the code and see the flag without actually solving the challenge thats the boring way of doing it. To prove to me you were able to get the flag the intended way show me a screenshot of you getting the flag running from a container.
 
 # Conclusion
+
+This was all a basic overview of Docker. When I first started out in cybersecurity I couldnt wrap my head around docker, same with many people starting out, so I hope this tutorial and lab i made helped. This was a cool little project and I look forward to doing more stuff. Thank you for reading my tutorial and completing my lab.

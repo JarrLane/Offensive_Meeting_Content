@@ -1,6 +1,6 @@
 import socket
 
-HOST = 'localhost'
+HOST = '0.0.0.0'
 PORT = 65432
 flag = "Master}"
 

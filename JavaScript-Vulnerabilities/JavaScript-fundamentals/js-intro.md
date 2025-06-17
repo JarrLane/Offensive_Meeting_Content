@@ -28,6 +28,6 @@ brackets such as { }, which we can call code blocks, this is often how functions
 variable, use const to declare a block constant, use if for conditional statements, use switch for switch statements, use for to make a block of statements that will execute in a loop, use function to declare a function, return to exit a
 function, and use try to handle errors if a block of code doesnt work. I'll get into the difference between var and let soon.
 
-In js there are two types of values, fixed (wont change) and variable (can change).
+In js there are two types of values, fixed (wont change) and variable (can change). Continue at JS syntax
 
 

@@ -1,1 +1,42 @@
+You know what is cool, you can talk to a device that is half way across the world within the span of a few seconds. Do you want to message to your friends in Denmark? Hop on a game with someone in Kentucky? Watch a tutorial video made
+by some guy in the UK? Why not do all three of those things? The internet allows us to do this. 
 
+The internet is a very powerful and impactful tool, but it also has many security concerns. In order to adress these concerns, it is important to understand how the internet and networks work. Knowing the basics of networking has alot of 
+benefits, not only is it useful to know for cyber security, but it is also useful for IT, coding, business, and alot more. Its also just very cool to learn. 
+
+To start off I will introduce the OSI model. The OSI/Open Systems Interconnection model is a way to see networking from different levels. When you run a game on your computer, you are running software that is running on an operating system
+that is using your RAM, CPU, and storage. All of this goes into running the game but we are listing it at different levels, you can say a game is just an app, or you can say a game is just a ton of 1s and 0s, either way you are 
+still describing the game. Same with networking. When you connect to a website, you are receiving https data, this data is encrypted and also most likely is part of a session, this all takes place over a tcp connection over port 443, and
+this is sent to your device by sending it to your devices IP address, this IP adress belongs to a device that has a MAC to identify itself, and in order for these devices to actually physically receive tha data, they use wifi or a wired
+ethernet connection. Thay may be a bit complex at first but it will start to make more sense once you understand OSI.
+
+OSI is split into 7 layers (some people like to combine the top three layers into one, and say OSI has four layers, but I will refer to it with seven layers). We call these layers:
+
+1. Physical: How does your device actually receive those 1s and 0s? Use ethernet or WiFi to receive the data.
+
+2. Data Link: Which computer should be receiving this data? Devices use MAC addresses to distinguish themselves, and switches use those addresses to ensure each computer gets the traffic intended for it.
+
+3. Network: Which network should this data be sent to and which device on that network should receive that data? Use a router to find and send data to a target network, or deliver incoming data to an address that defines a device.
+
+4. Transport: What kind of data is being sent, and what type of connection is being made to receive this data? Check the protocol and port number to understand the service that would use this type of connetion and data.
+
+5. Session: Does this data relate to previous communications? Check the data for session information. 
+
+6. Presentation: Is this data readable or does it need to be decrypted/decoded in order to be presented properly? Use a key to decrypt the information, or maybe decode the information to properly display in its intended form.
+
+7. Application: What will your computer do with this data? Depends on what you are doing, maybe going to a website or maybe receiving an email.
+
+All of these layers work together to make up the internet as a whole. Heres a more detailed way to understand the layers, in this example lets say computer 1 (C1) wants to share an image to computer 2 (C2).
+
+Physical: If these two computers are next to each other, lets connect them with a cable, or if they have wireless capabilities lets connect them wirelessly.
+
+Data link: What if Computers 1 and 2 are located in a small office and are connected with a switch that also connects a printer, how does C1 specifically send traffic to C2? Computers have a piece of hardware called a Network Interface
+Card (NIC) that is made to send and receive data, these NICs contain a Media Access Control address, or MAC address, that is unique to it. (A MAC is made up of 12 hex digits) Lets say the NIC on C1 is 00:00:00:00:00:01 (this is not what
+a mac will look like realistically but for simplicity thats how I will type it out) and the NIC on C2 is 00:00:00:00:00:02 and for the printer 00:00:00:00:00:03. C1 will send the data to the switch telling it to send it to the MAC address 
+of C2, and since the switch knows the MAC of every device connected to it, it knows to send it to C2 and not the printer.
+
+Network: (When I say network, think of a group of devices that can communicate over a switch) What if C1 isnt connected to the same network as C2? Heres where we use a router. We task the router with finding the network that C2 is on, then we task the router with finding the path to that network, then the router passes
+that information on its way. If the next router isnt connected to the network we want, it will look at the destination, and send it in the appropriate direction. Eventually The destination router is reached. How does the router identify 
+the destination? it uses something called an IP addressAny device capable of communicating with different networks has an IP address. Why not use the MAC address, why use an IP address? The MAC address is useful for identifying devices 
+on the same network but when they arent on the same network they dont know each others MACs, and even if they did, they cant send data to the MAC because the MAC is not connected to the same switch. This is where an IP address comes in, 
+an IP adress tells us either which network a device is located in and where in that network is the device located. If you have 

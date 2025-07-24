@@ -1,7 +1,4 @@
-Here I will start learning basic Javascript, I will try to get the important concepts down and give some good examples. Im going to primarily use W3 schools and summarize what i learn from there in my own words.
-
-Before you continue, I would say you are required to have at least some basic programming understanding because im going to write these notes in a way that someone without any programming knowledge will struggle to keep up with. I also 
-reccomend you have a basic understanding of html and css, if not ill try to summarize as basic as possible when it comes up. Apart from that you should be fine.
+My notes from reading javascript tutorials from W3 schools.
 
 JavaScript is primarily used to program the behavior of web pages. We can use it to change the HTML that is displayed to us. (If you dont know what HTML is, it is hypertext markup language, it is what we actually see when using a website)
 Typically we can see the javascript inserted within the HTML when we inspect a pages source using f12, this is contained within ```<script> </script>```. We can also find JavaScript contained in external files that are referred to, these files
@@ -28,6 +25,6 @@ brackets such as { }, which we can call code blocks, this is often how functions
 variable, use const to declare a block constant, use if for conditional statements, use switch for switch statements, use for to make a block of statements that will execute in a loop, use function to declare a function, return to exit a
 function, and use try to handle errors if a block of code doesnt work. I'll get into the difference between var and let soon.
 
-In js there are two types of values, fixed (wont change) and variable (can change). Continue at JS syntax
+In js there are two types of values, fixed (wont change) and variable (can change). Fixed values are hard coded, or directly writen in the code, variables are declared, and hold whatever they are assigned. Use var and let to create variables. Any variable declered with const doesnt chabge its asssigned value. 
 
 

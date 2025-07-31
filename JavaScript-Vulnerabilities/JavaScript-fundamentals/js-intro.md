@@ -18,12 +18,9 @@ document.getElementById("demo").innerHTML = "<h2>js changed me from a blank elem
 ```
 We reference the id of the paragraph element and change its contents, and we will see this change displayed to us. If we want to change just the text of an element we can use innerTEXT too. There is also document write, this will write to
 html but it should be used with caution because if it is used after a page is loaded it gets rid of all the other html. Using window.alert or alert will show a popup of some output. console.log() can also display output in the console in the
-browser, usually for debugging. I will get into more specifics of what things like window and console means soon but for now as long as you understand that these functions show js output you are good.
+browser, usually for debugging. 
 
-If you are familiar with basic programming you know that we use statements, which are instructions that are executed. Same with js. We can separate js statements with ;. Using multiple statements to define a procedure can be contained in 
-brackets such as { }, which we can call code blocks, this is often how functions are made. Js also has its own keywords that indicate what the program will do, some basic keywords: use var to declare a variable, use let to declare a block 
-variable, use const to declare a block constant, use if for conditional statements, use switch for switch statements, use for to make a block of statements that will execute in a loop, use function to declare a function, return to exit a
-function, and use try to handle errors if a block of code doesnt work. I'll get into the difference between var and let soon.
+Separate statements with ;
 
 In js there are two types of values, fixed (wont change) and variable (can change). Fixed values are hard coded, or directly writen in the code, variables are declared, and hold whatever they are assigned. Use var and let to create variables. Any variable declered with const doesnt chabge its asssigned value. 
 

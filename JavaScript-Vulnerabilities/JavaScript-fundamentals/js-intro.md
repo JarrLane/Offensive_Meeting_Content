@@ -53,6 +53,11 @@ JavaScript numbers are always stored as double precision floating point numbers,
 
 For comparisons,== is equal to, === is equal value and type, != is not equal, !== is not equal value or type. The ?? operator returns the first argument if it is not nullish (null or undefined). Otherwise it returns the second argument.
 
-Continue at js template strings
+Use for in to loop through the properties of an object, use for of to loop through the properties of an iterable object.
+
+A JavaScript Set is a collection of unique values. Each value can only occur once in a Set. The values can be of any type, primitive values or objects. 
+
+
+Continue at js sets
 
 

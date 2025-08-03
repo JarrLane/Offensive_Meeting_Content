@@ -47,6 +47,12 @@ If you want to add a property to a constructor you add it to the constructor fun
 
 In HTML events are things that happen to elements, js can react to these events. Common events: onchange if an element was changed, onclick if an element was clicked, onmouseover if the user has their mouse over an element, onmouseout if the users mouse moves away from an element, onkeydown if a keyboard key is pressed, and onload when a browser finishes loading a page. 
 
+Template strings are special strings defined with ` quotes that can contain quotes, and take variables and interpolate them. Interpolation is the insertion of something of a different nature into something else. They can also take in expressions and evaluate them in the string. 
+
+JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard. Some integers round incorrectly if they are too big. Safe integers are all integers from -(2^53 - 1) to +(2^53 - 1). 
+
+For comparisons,== is equal to, === is equal value and type, != is not equal, !== is not equal value or type. The ?? operator returns the first argument if it is not nullish (null or undefined). Otherwise it returns the second argument.
+
 Continue at js template strings
 
 

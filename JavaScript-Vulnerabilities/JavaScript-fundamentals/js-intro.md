@@ -1,5 +1,7 @@
 My notes from reading javascript tutorials from W3 schools.
 
+These notes are scattered so proceed with caution
+
 JavaScript is primarily used to program the behavior of web pages. We can use it to change the HTML that is displayed to us.
 Typically we can see the javascript inserted within the HTML when we inspect a pages source using f12, this is contained within ```<script> </script>```. We can also find JavaScript contained in external files that are referred to, these files
 end in .js, and we can refer to them in the html using src like so: ```<script src="myScript.js"></script>``` Along with that, we can also reference external js code.
@@ -55,9 +57,16 @@ For comparisons,== is equal to, === is equal value and type, != is not equal, !=
 
 Use for in to loop through the properties of an object, use for of to loop through the properties of an iterable object.
 
-A JavaScript Set is a collection of unique values. Each value can only occur once in a Set. The values can be of any type, primitive values or objects. If you try adding duplicate values only the first instance will be added. A js map is a data structure for storing key-value pairs with flexible key types and insertion order preservation. It is like an object but it maintains order of insertion and can have the key be any type. Typed Arrays handle binary data, they hold fixed length of data, they are very fast. Iterating means looping over a sequence of elements. 
+A JavaScript Set is a collection of unique values. Each value can only occur once in a Set. The values can be of any type, primitive values or objects. If you try adding duplicate values only the first instance will be added. A js map is a data structure for storing key-value pairs with flexible key types and insertion order preservation. It is like an object but it maintains order of insertion and can have the key be any type. Typed Arrays handle binary data, they hold fixed length of data, they are very fast. 
+
+Iterating means looping over a sequence of elements. An Iterator is an object that provides a standard way to access elements sequentially. An Iterator must adheres to the Iterator Protocol: It must have a next() method. The next() method returns an object with two properties:
+
+  The value property holds the next value in the iteration sequence.
+  The done property returns false if there are more elements to iterate over, otherwise it returns true.
+
+Empty an object by setting it to Null. Undefined and null are the smae value but undefined is of type undefined and Null is of type object. Destructuring is unpacking object properties into variables. Regullar expressions are characters that form a search pattern. The syntax for using them is ```/pattern/modifier flags; ```. Im not getting into the specifics because i can always come back to the module. 
 
 
-Continue at js type arrays
+Continue at js hoisting
 
 

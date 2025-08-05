@@ -55,7 +55,7 @@ For comparisons,== is equal to, === is equal value and type, != is not equal, !=
 
 Use for in to loop through the properties of an object, use for of to loop through the properties of an iterable object.
 
-A JavaScript Set is a collection of unique values. Each value can only occur once in a Set. The values can be of any type, primitive values or objects. If you try adding duplicate values only the first instance will be added. A js map is a data structure for storing key-value pairs with flexible key types and insertion order preservation. It is like an object but it maintains order of insertion and can have the key be any type. Typed Arrays handle binary data, they hold fixed length of data, they are very fast. 
+A JavaScript Set is a collection of unique values. Each value can only occur once in a Set. The values can be of any type, primitive values or objects. If you try adding duplicate values only the first instance will be added. A js map is a data structure for storing key-value pairs with flexible key types and insertion order preservation. It is like an object but it maintains order of insertion and can have the key be any type. Typed Arrays handle binary data, they hold fixed length of data, they are very fast. Iterating means looping over a sequence of elements. 
 
 
 Continue at js type arrays

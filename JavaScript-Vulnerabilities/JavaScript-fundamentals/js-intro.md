@@ -78,6 +78,8 @@ Js can be executed in struct mode with ```"use strict";```. It wont let you use 
 
 In js use ```class``` to create a class and always add a method named ```constructor```. A js class is not an object, its a template for js objects. A class uses a prototype under the hood, its just cleaner syntax. Js modules let code be broken into different files.
 
+Js modules let you break up your code into different files, like in python where you can separate code and import the files into each other.
+
 
 Continue at js modules
 

@@ -72,9 +72,13 @@ With JavaScript, the global scope is the JavaScript environment.
 
 In HTML, the global scope is the window object.
 
-Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top of their scope (either the global scope or function scope) before code execution, this is done by default. JavaScript only hoists declarations, not initializations, so you can use a variable before its declaration but if you use a variable before initialization you get an error, if the variable is made with let and const they are hoisted but unlike with var they aren’t able to be used before declaration.
+Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top of their scope (either the global scope or function scope) before code execution, this is done by default. JavaScript only hoists declarations, not initializations, so you can use a variable before its declaration but if you use a variable before initialization you get an error, if the variable is made with let and const they are hoisted but unlike with var they aren’t able to be used before declaration. When coding in js its good practice to declare all variables at the top to avoid unexpected behavior and stick with the default. 
+
+Js can be executed in struct mode with ```"use strict";```. It wont let you use undeclared variables. When doing use strict, it applies to the scope its declared in. Strict mode transforms acceptible bad syntax to real errors. In strict mode, ```this``` refers to the object that called the function. If the object is not specified strict mode returns undefined and normal mode returns the global object. 
+
+In js use ```class``` to create a class and always add a method named ```constructor```. A js class is not an object, its a template for js objects. A class uses a prototype under the hood, its just cleaner syntax. Js modules let code be broken into different files.
 
 
-Continue at js hoisting
+Continue at js modules
 
 

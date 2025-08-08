@@ -64,7 +64,15 @@ Iterating means looping over a sequence of elements. An Iterator is an object th
   The value property holds the next value in the iteration sequence.
   The done property returns false if there are more elements to iterate over, otherwise it returns true.
 
-Empty an object by setting it to Null. Undefined and null are the smae value but undefined is of type undefined and Null is of type object. Destructuring is unpacking object properties into variables. Regullar expressions are characters that form a search pattern. The syntax for using them is ```/pattern/modifier flags; ```. Im not getting into the specifics because i can always come back to the module. 
+Empty an object by setting it to Null. Undefined and null are the smae value but undefined is of type undefined and Null is of type object. Destructuring is unpacking object properties into variables. Regular expressions are characters that form a search pattern. The syntax for using them is ```/pattern/modifier flags; ```. Im not getting into the specifics because i can always come back to the module. 
+
+With operator precedence, operations with the same precedence (like * and /) are computed from left to right. Python and js handle errors similarly, try = try except = catch finally = finally raise = throw. Python is generally stricter and has more built in errors, and Java script is more dynamic and can have more surprises. Js returns an error object with name and message. 
+
+With JavaScript, the global scope is the JavaScript environment.
+
+In HTML, the global scope is the window object.
+
+Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top of their scope (either the global scope or function scope) before code execution, this is done by default. JavaScript only hoists declarations, not initializations, so you can use a variable before its declaration but if you use a variable before initialization you get an error, if the variable is made with let and const they are hoisted but unlike with var they aren’t able to be used before declaration.
 
 
 Continue at js hoisting

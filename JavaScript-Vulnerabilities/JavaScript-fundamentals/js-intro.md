@@ -78,7 +78,7 @@ Js can be executed in struct mode with ```"use strict";```. It wont let you use 
 
 In js use ```class``` to create a class and always add a method named ```constructor```. A js class is not an object, its a template for js objects. A class uses a prototype under the hood, its just cleaner syntax. Js modules let code be broken into different files.
 
-Js modules let you break up your code into different files, like in python where you can separate code and import the files into each other.
+Js modules let you break up your code into different files. There are two ways to share code between files. One way is modules and another is using ```src =```. The difference between the two is that modules can have certain parts explicitly exportable to be used elsewhere or otherwise have parts in a private scope. Using ```src =``` puts everything in that code in the global scope. When you import from a module you can only import things that are explicitly able to be exported. With src = you get everything. Use modules for encapsulation, selective imports, and scalability. Use src equals for smaller projects.  
 
 
 Continue at js modules

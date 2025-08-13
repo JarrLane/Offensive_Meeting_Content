@@ -81,6 +81,7 @@ In js use ```class``` to create a class and always add a method named ```constru
 Js modules let you break up your code into different files. There are two ways (there are more than two but for simplicity 2) to share code between files. One way is modules and another is using ```src =```. The difference between the two is that modules can have certain parts explicitly exportable to be used elsewhere or otherwise have parts in a private scope. Using ```src =``` puts everything in that code in the global scope. When you import from a module you can only import things that are explicitly able to be exported. With src = you get everything. Use modules for encapsulation, selective imports, and scalability. Use src equals for smaller projects. Codebase maintenance refers to the ongoing process of keeping a software project's source code in a functional, efficient, and adaptable state. Separate files can simplify maintaining a code base. In the script tag modiles must have ```type = module```. Modules only work with the http(s) protocol because using file:// could compromise security and reach system files.  
 
 
+
 Continue at js modules
 
 

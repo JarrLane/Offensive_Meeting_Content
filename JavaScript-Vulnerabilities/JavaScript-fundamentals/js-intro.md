@@ -86,7 +86,7 @@ Searching for (and fixing) errors in programming code is called code debugging. 
 
 Always use 2 spaces for indentation of code blocks. Do not use tabs (tabulators) for indentation. Different editors interpret tabs differently. Hyphens can be mistaken as subtraction attempts. Hyphens are not allowed in JavaScript names. Use simple syntax for loading external scripts (the type attribute is not necessary): ```<script src="myscript.js"></script>```. If possible, use the same naming convention (as JavaScript) in HTML. Avoid global variables, avoid new, avoid ==, avoid eval(). Global varbiables should be minimized because global variables and functions can be overwritten by other scripts.All variables used in a function should be declared as local variables. Local variables must be declared with the var, the let, or the const keyword, otherwise they will become global variables. Declaring objects with const will prevent any accidental change of type. 
 
-
++ does both adding and concatenation. For whatever reason if you put a semi colon at the end of an if statement like ```if (x==5);``` will evaluate as true even if x = 9. Each statement in a loop, including the for statement, is executed for each iteration of the loop. Statements or assignments that can be placed outside the loop will make the loop run faster. So ```for (let i = 0; i < arr.length; i++) {``` is slow compared to ```let l = arr.length; for (let i = 0; i < l; i++) {```. Accessing the HTML DOM is very slow, compared to other JavaScript statements. If you expect to access a DOM element several times, access it once, and use it as a local variable like this ```const obj = document.getElementById("demo"); obj.innerHTML = "Hello";```. 
 
 
 Continue at js mistakes

@@ -89,6 +89,6 @@ Always use 2 spaces for indentation of code blocks. Do not use tabs (tabulators)
 Plus sign does both adding and concatenation. For whatever reason if you put a semi colon at the end of an if statement like ```if (x==5);``` will evaluate as true even if x = 9. Each statement in a loop, including the for statement, is executed for each iteration of the loop. Statements or assignments that can be placed outside the loop will make the loop run faster. So ```for (let i = 0; i < arr.length; i++) {``` is slow compared to ```let l = arr.length; for (let i = 0; i < l; i++) {```. Accessing the HTML DOM is very slow, compared to other JavaScript statements. If you expect to access a DOM element several times, access it once, and use it as a local variable like this ```const obj = document.getElementById("demo"); obj.innerHTML = "Hello";```. Keep the number of elements in the HTML DOM small. Putting your scripts at the bottom of the page body lets the browser load the page first. The defer attribute specifies that the script should be executed after the page has finished parsing, but it only works for external scripts. The with keyword is slow.
 
 
-Continue at js mistakes
+Continue at js statements reference
 
 

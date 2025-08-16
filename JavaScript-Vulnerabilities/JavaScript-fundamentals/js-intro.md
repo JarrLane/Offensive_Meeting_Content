@@ -2,6 +2,8 @@ My notes from reading javascript tutorials from W3 schools. https://www.w3school
 
 These notes are scattered so proceed with caution
 
+Node js is for backend and system stuff and has a lot more access to things than browser js. Browser js for client side application and node js for server side development.
+
 JavaScript is primarily used to program the behavior of web pages. We can use it to change the HTML that is displayed to us.
 Typically we can see the javascript inserted within the HTML when we inspect a pages source using f12, this is contained within ```<script> </script>```. We can also find JavaScript contained in external files that are referred to, these files
 end in .js, and we can refer to them in the html using src like so: ```<script src="myScript.js"></script>``` Along with that, we can also reference external js code.
@@ -109,7 +111,7 @@ In an object method, this refers to the object.
 In an event, this refers to the element that received the event.
 Methods like call(), apply(), and bind() can refer this to any object.
 
-When a function is called without an owner object, the value of this becomes the global object. If a function invocation is preceded with the new keyword, it is a constructor invocation. This is when a function creates a new object. The object created by the constructor inherits the properties and methods from the constructor. The this keyword in the constructor does not have a value. The value of this will be the new object created when the function is invoked. In JavaScript all functions are object methods. If a function is not a method of a JavaScript object, it is a function of the global object. 
+When a function is called without an owner object, the value of this becomes the global object. If a function invocation is preceded with the new keyword, it is a constructor invocation. This is when a function creates a new object. The object created by the constructor inherits the properties and methods from the constructor. The this keyword in the constructor does not have a value. The value of this will be the new object created when the function is invoked. In js, “this” binding rules determines what this points to in certain contexts. Implicit binding is when a method is called on an object, this points to that object. Explicit binding which explicitly sets binding with functions like call() apply() bind(). New binding means a function called with the new keyword sets this to the newly created object. In default binding if this is not set by any of the above rules, it defaults to the global object (or undefined in strict mode). The preceence goes: New binding highest, explicit binding second, implicit binding 3rd, default binding. 4th. In JavaScript all functions are object methods. If a function is not a method of a JavaScript object, it is a function of the global object. 
 
 Continue at function this
 

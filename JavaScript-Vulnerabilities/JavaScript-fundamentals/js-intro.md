@@ -92,7 +92,25 @@ JavaScript statements start with a statement identifier to identify the JavaScri
 
 JavaScript functions are defined with the function keyword. Functions can be made from declaration or expressions. An expression is any valid unit of code that resolves to a value. Declarations are when you write out the function and call it later, expressions are when functions are written as a part of larger expression syntax or assigned to a variable or used a callback or boolean operand. After a function expression has been stored in a variable, the variable can be used as a function. An anonymous function is a function without a name. Functions stored in variables do not need function names. They are always invoked (called) using the variable name. A self-invoking function expression is invoked (started) automatically, without being called. The typeof operator in JavaScript returns "function" for functions but JavaScript functions can best be described as objects. JavaScript functions have both properties and methods. A function defined as the property of an object, is called a method to the object. A function designed to create new objects, is called an object constructor.
 
+Arrow functions allows a shorter syntax for function expressions. You don't need the function keyword, the return keyword, and the curly brackets. ```let myFunction = (a, b) => a * b;``` If the function has only one statement that returns a value, you can remove the brackets and the return keyword. ```let hello = () => "Hello World!";``` If you have parameters, you pass them inside the parentheses, although if it’s just one parameter you don’t need parentheses. ```let hello = val => "Hello " + val;``` Arrow functions do not have their own ```this```. They are not well suited for defining object methods. Arrow functions are not hoisted. They must be defined before they are used.
 
-Continue at function arrows
+With the this keyword
+
+Regular functions: “this depends on who calls it” (they have their own this, determined at call time).
+Arrow functions: “They don’t have their own this; they use the this from the surrounding scope.”
+A JavaScript function does not perform any checking on parameter values (arguments). This means data types aren’t specified, the function doesn’t check the type passed, and the function doesn’t check how many arguments were given. If less values are given then expected, the missed value is set to undefined unless you assign it a default value. Use the rest parameter (...) to take in an indefinite amount of arguments as an array. A function has an arguments object that has the arguments given to the called function. Js arguments are passed by value, if an object is passed it’s passed by reference. In JavaScript, the this keyword refers to an object.
+
+The this keyword refers to different objects depending on how it is used:
+
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an object method, this refers to the object.
+In an event, this refers to the element that received the event.
+Methods like call(), apply(), and bind() can refer this to any object.
+
+When a function is called without an owner object, the value of this becomes the global object. If a function invocation is preceded with the new keyword, it is a constructor invocation. This is when a function creates a new object. The object created by the constructor inherits the properties and methods from the constructor. The this keyword in the constructor does not have a value. The value of this will be the new object created when the function is invoked. In JavaScript all functions are object methods. If a function is not a method of a JavaScript object, it is a function of the global object. 
+
+Continue at function this
 
 

@@ -113,6 +113,44 @@ Methods like call(), apply(), and bind() can refer this to any object.
 
 When a function is called without an owner object, the value of this becomes the global object. If a function invocation is preceded with the new keyword, it is a constructor invocation. This is when a function creates a new object. The object created by the constructor inherits the properties and methods from the constructor. The this keyword in the constructor does not have a value. The value of this will be the new object created when the function is invoked. In js, “this” binding rules determines what this points to in certain contexts. Implicit binding is when a method is called on an object, this points to that object. Explicit binding which explicitly sets binding with functions like call() apply() bind(). New binding means a function called with the new keyword sets this to the newly created object. In default binding if this is not set by any of the above rules, it defaults to the global object (or undefined in strict mode). The preceence goes: New binding highest, explicit binding second, implicit binding 3rd, default binding. 4th. In JavaScript all functions are object methods. If a function is not a method of a JavaScript object, it is a function of the global object. 
 
+Node js is for backend and system stuff and has a lot more access to things than browser js. Browser js for client side application and node js for server side development. 
+
+In js, “this” binding rules determines what this points to in certain contexts. Implicit binding is when a method is called on an object, this points to that object. Explicit binding which explicitly sets binding with functions like call() apply() bind(). New binding means a function called with the new keyword sets this to the newly created object. In default binding if this is not set by any of the above rules, it defaults to the global object (or undefined in strict mode).
+
+The call() method lets an objects method be used on another object. 
+person.fullName.call(person1);
+ here person1 works with persons method, call() also takes in arguments for that method along with the object. The apply() method is very similar to call() but it takes arguments as an array. You can do cool things like run functions on arrays that don’t normally take arrays like: 
+Math.max.apply(null, [1,2,3]);
+ In the apply function, if an object is the first parameter you’re good, if it’s a primitive strict keeps it a primitive nonstrict boxes it. If it’s null or undefined no strict makes it a global object strict keeps it as is 
+
+Boxing in JavaScript means temporarily wrapping a primitive value (like a number, string, or boolean) inside its corresponding object wrapper, so that methods and properties can be accessed
+
+The bind method allows an object to borrow another object’s method. When a function is passed as a callback It usually loses its original this because it’s called in a different context. Fix it by binding, or wrapping it in an arrow function (since arrows capture this from where they are created). Without bind, 
+setTimeout(person.display, 3000);
+would show undefined because it points to setTimeout not person. A callback is a function passed as an argument to another function.
+
+Global variables live until the page is discarded, like when you navigate to another page or close the window.
+
+Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished.
+JavaScript supports nested functions. Nested functions have access to the scope "above" them.
+
+A closure closes over its environment and keeps local variables and arguments from the function its nested in alive. The function captures its execution environment.
+
+when you return the nested function to a variable, that variable gets the parent variable kept in the outer function that the inner function retained, when you call that variable as a function, the outer variable it kept is remembered and operated on.
+
+When you make the variable and get that inner function returned, thats a closure.
+
+A closure is created:
+
+When a function (inner function) is defined inside another function (outer function),
+
+AND that inner function uses variables from the outer function’s scope,
+
+AND you do something that preserves that inner function — like returning it or assigning it somewhere.
+
+
+
+
 Continue at function this
 
 

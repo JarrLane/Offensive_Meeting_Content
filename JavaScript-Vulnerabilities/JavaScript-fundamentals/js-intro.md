@@ -148,8 +148,9 @@ AND that inner function uses variables from the outer function’s scope,
 
 AND you do something that preserves that inner function — like returning it or assigning it somewhere.
 
+Make objects from literals, new keyword, constructor, .assign, .create, and .fromEntries. 
 
-
+The .create creates an object from an existing object. FromEntries from key/value pairs. Assign to copy one or more source objects to a target object
 
 Continue at function this
 

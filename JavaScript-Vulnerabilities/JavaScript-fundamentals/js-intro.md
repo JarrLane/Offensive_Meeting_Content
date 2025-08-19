@@ -152,6 +152,13 @@ Make objects from literals, new keyword, constructor, .assign, .create, and .fro
 
 The .create creates an object from an existing object. FromEntries from key/value pairs. Assign to copy one or more source objects to a target object. All js values except primitives are objects. 
 
+Objects inherit properties and methods from other objects through prototypes. Since all objects have prototype, there is a prototype chain that links each object. The top of the chain is ```Object.prototype```. The prototype property allows for new properties or methods to be added to object constructors. A prototype is an object that is a template for other objects. Properties in js can have attributes that determine if they are enumerable configurable and writable, this is their meta data. Getters and setters in JavaScript are special methods that allow you to define how to access and update properties of an object, these are called accessor properties. The const keyword stops the object from being re-assigned. Using .preventExtensions keeps from properties being added to an object. Using .seal prevents addition or deletion of new properties. Using .freeze prevents any changes to an object at all. 
+
+A callback is a function passed as an argument to another function, letting a function call another function. Functions are executed in the sequence they are called. Callbacks can be called once the outer function decides to. Asynchronous functions are when functions run while a longer task is offloaded, while synchronous means one function executes after another. Producing code takes time and consuming code must wait for producings result. A promise links these. A promise is a special object that represents a value that might come in the future. When the value comes, it is handled with .then. Use async to return a promise, use await to wait for a promise. The async keyword is the same as sending the result from a promise object just cleaner. The await keyword waits for the resolved promise before continuing. 
+
+^This woman explains this stuff great https://youtu.be/eiC58R16hb8?feature=shared
+
+
 Continue at js object properties
 
 

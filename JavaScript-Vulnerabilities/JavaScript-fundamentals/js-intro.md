@@ -160,9 +160,11 @@ A callback is a function passed as an argument to another function, letting a fu
 
 Another way to think asynchronous is that web apis handle heavy tasks separately while a single js thread does other stuff, the event loop pulls the callback function that handles the result of the heavy task from a queue that an event loop empties as there is a free call stack.
 
-The HTML DOM Document Object Model lets js access html elements. 
+The HTML DOM Document Object Model lets js access html elements. The DOM is a way of conceptualizing a document and its contents as a tree of objects, this concept makes it easy to access and update parts of a document. This can be standard, or applied ot xml or html. This object model/programming interface for html defines elements as objects, and their properties methods and events. 
+
+We call the content of an element the innerHTML. The HTML DOM document object ```document``` reigns over all other objects on the page, you need it to access any element on the page. To manipulate html elements you neet to find them first, they can be found by their id, tag name, class name, css selectors, and html object collections. Constraint validation is an html5 concept that do more advanced validation with forms regarding html input attributes, css pseudo selectors, and dom properties/methods. You can animate elements with js by gradually changing an elements style. Use events to have js work with events happening to elements. 
 
 
-Continue at js HTML DOM
+Continue at js HTML DOM Navigation
 
 

@@ -158,7 +158,11 @@ A callback is a function passed as an argument to another function, letting a fu
 
 ^This woman explains this stuff great https://youtu.be/eiC58R16hb8?feature=shared
 
+Another way to think asynchronous is that web apis handle heavy tasks separately while a single js thread does other stuff, the event loop pulls the callback function that handles the result of the heavy task from a queue that an event loop empties as there is a free call stack.
 
-Continue at js object properties
+The HTML DOM Document Object Model lets js access html elements. 
+
+
+Continue at js HTML DOM
 
 

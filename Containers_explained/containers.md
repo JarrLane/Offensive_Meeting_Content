@@ -354,3 +354,7 @@ https://stackoverflow.com/questions/34809646/what-is-the-purpose-of-volume-in-do
 https://www.geeksforgeeks.org/what-is-docker-hub/
 
 https://www.youtube.com/watch?v=DQdB7wFEygo
+
+# Extra notes and clarifications
+
+Slight difference from my analogy of a soccer field, one image runs many containers, unlike how one setup field lets many teams practice
